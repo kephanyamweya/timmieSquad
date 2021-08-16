@@ -38,6 +38,6 @@ public class Squad {
 
 
     public static Squad setUpNewSquad(){return new Squad("Creed",5,"Injustices");}
-    public static Squad setUpNewSquad1(){return new Squad("Kwang",5,"inequalities");}
+    public static Squad setUpNewSquad1(){return new Squad("Apostle",5,"inequalities");}
 
 }
