@@ -1,0 +1,24 @@
+{{#partial "content"}}
+
+<h1>Hero list!</h1>
+
+{{#if heroes}} <!--if Hero exist, then -->
+    {{#each Hero}}
+    <p>Current Hero:</p>
+    <p>{{ content }}</p>
+    {{/each}}
+    {{else}}
+    <p>No hero!</p>
+    {{/if}}
+
+<p>Add a new Hero:</p>
+
+<form action="/heroes/new" method="POST">
+<label for="content">Hero Description</label>
+<input id="content" name="content" type="text">
+
+<button type="submit" class="btn btn-default">Add hero</button>
+</form>
+{{/partial}}
+
+{{> layout.hbs}}

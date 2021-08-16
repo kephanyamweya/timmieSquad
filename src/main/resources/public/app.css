@@ -1,0 +1,18 @@
+body, html{
+    background-image: url("/images/The-Flash.png");
+    background-size: cover;
+}
+.container{
+   margin-top: 2em;
+   padding: px;
+   border-radius: 5px;
+   background: #ddb892;
+   width: 40%;
+ }
+ .navigation{
+    background: #8a5a44;
+ }
+ .navigation li a{
+   text-decoration: none;
+ }
+

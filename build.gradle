@@ -1,0 +1,26 @@
+plugins {
+    id 'groovy'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'App'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.8'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    implementation "com.sparkjava:spark-template-handlebars:2.7.1"
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
+
+}
+
+test {
+    useJUnitPlatform()
+}

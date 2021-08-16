@@ -1,0 +1,22 @@
+{{#partial "content"}}
+     <h1>Create Your Squad</h1>
+     <div class="container">
+        <form class="form" action="/squad/new" method="post">
+
+            <div class="form-group">
+                <input type="text" placeholder="Enter the squad name" name="squadName" class="form-control" required>
+
+            </div>
+            <div class="form-group">
+                <input type="number" placeholder="Enter the max size" name="size"  class="form-control"  required>
+
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Enter mission" name="cause"  class="form-control"  required>
+
+            </div>
+            <input type="submit" class="btn">
+        </form>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
