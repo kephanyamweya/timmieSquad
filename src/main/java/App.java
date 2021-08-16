@@ -27,12 +27,12 @@ public class App {
 
 
         get("/index", (request, response) -> {
-            Map<String, Object> model = new HashMap<String,Object>();
+            Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/hero-form", (request, response) -> {
-            Map<String,Object> model = new HashMap<String,Object>();
+            Map<String,Object> model = new HashMap<>();
             return new ModelAndView(model,"hero-form.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -69,7 +69,7 @@ public class App {
 
 
         post("/squad/new", (request, response) -> {
-            Map<String,Object> model = new HashMap<String, Object>();
+            Map<String,Object> model = new HashMap<>();
             String squadName = request.queryParams("squadName");
             Integer size = Integer.parseInt(request.queryParams("size"));
             String cause = request.queryParams("cause");
