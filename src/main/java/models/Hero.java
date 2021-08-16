@@ -34,7 +34,7 @@ public class Hero {
 
 
     public static Hero setUpNewHero() {return new Hero("Timmie",26,"invisible","cute");}
-    public static Hero setUpNewHero1() {return new Hero("Dee",20,"speed","water");}
+    public static Hero setUpNewHero1() {return new Hero("Crusher",20,"speed","water");}
     public static Hero setUpNewHero2() {return new Hero("Fixer",19,"strength","bee sting");}
 
 
