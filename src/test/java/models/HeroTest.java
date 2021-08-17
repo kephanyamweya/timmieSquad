@@ -1,6 +1,6 @@
 package models;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 import static org.junit.Assert.assertEquals;
@@ -25,12 +25,12 @@ public class HeroTest {
     @Test
     public void newHero_getPower_String() {
         Hero newHero = Hero.setUpNewHero();
-        assertEquals("invincible",newHero.getPower());
+        assertEquals("invisible",newHero.getPower());
     }
     @Test
     public void newHero_getWeakness_String() {
         Hero newHero = Hero.setUpNewHero();
-        assertEquals("water",newHero.getWeakness());
+        assertEquals("cute",newHero.getWeakness());
     }
     @Test
     public void newHero_getAllInstances_true() {
