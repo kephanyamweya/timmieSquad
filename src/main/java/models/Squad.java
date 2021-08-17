@@ -1,7 +1,6 @@
 package models;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Squad {
 
@@ -30,8 +29,14 @@ public class Squad {
     public ArrayList<Hero> getSquadMembers(){
         return squadMembers;
     }
-    public void setSquadMembers(Hero newMember) {
-        squadMembers.add(newMember);
+    public boolean setSquadMembers(Hero newMember) {
+        if (squadMembers.size() == 5) {
+            System.out.println("squad members size = "+ squadMembers.size());
+            return false;
+        } else {
+            squadMembers.add(newMember);
+            return true;
+        }
     }
     public static void clearAllSquads(){ instances.clear(); }
     public void clearAllSquadMembers(){ getSquadMembers().clear(); }
