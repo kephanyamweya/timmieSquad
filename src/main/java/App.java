@@ -27,7 +27,7 @@ import static spark.Spark.*;
             Squad.setUpNewSquad();
 
 
-            get("/index", (request, response) -> {
+            get("/", (request, response) -> {
                 Map<String, Object> model = new HashMap<>();
                 return new ModelAndView(model, "index.hbs");
             }, new HandlebarsTemplateEngine());
@@ -57,7 +57,7 @@ import static spark.Spark.*;
                 return new ModelAndView(model, "squad-form.hbs");
             }, new HandlebarsTemplateEngine());
 
-            get("/", (req, res) -> {
+            get("/squad", (req, res) -> {
                 Map<String, Object> model = new HashMap<>();
                 ArrayList<Squad> squads = Squad.getInstances();
                 model.put("squads", squads);
