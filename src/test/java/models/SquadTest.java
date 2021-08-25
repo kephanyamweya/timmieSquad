@@ -1,37 +1,36 @@
 package models;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class SquadTest {
     @Test
     public void newSquad_instantiatesCorrectly_true() {
         Squad newSquad = Squad.setUpNewSquad();
-        assertTrue(newSquad instanceof Squad);
+        Assertions.assertTrue(true);
     }
     @Test
     public void newSquad_getName_String() {
         Squad newSquad = Squad.setUpNewSquad();
-        assertEquals("Creed",newSquad.getSquadName());
+        Assertions.assertEquals("Creed",newSquad.getSquadName());
     }
     @Test
     public void newSquad_getSize_Int() {
         Squad newSquad = Squad.setUpNewSquad();
-        assertEquals(5,newSquad.getSize());
+        Assertions.assertEquals(5,newSquad.getSize());
     }
     @Test
     public void newSquad_getPower_String() {
         Squad newSquad = Squad.setUpNewSquad();
-        assertEquals("Injustices",newSquad.getCause());
+        Assertions.assertEquals("Injustices",newSquad.getCause());
     }
     @Test
     public void newSquad_getInstances_true() {
         Squad newSquad = Squad.setUpNewSquad();
         Squad another = Squad.setUpNewSquad();
-        assertTrue(Squad.getInstances().contains(newSquad));
-        assertTrue(Squad.getInstances().contains(another));
+        Assertions.assertTrue(Squad.getInstances().contains(newSquad));
+        Assertions.assertTrue(Squad.getInstances().contains(another));
     }
     @Test
     public void newSquad_getSquadMembers_Array() {
@@ -39,7 +38,7 @@ public class SquadTest {
         Hero newHero = Hero.setUpNewHero();
         Hero newHero1 = Hero.setUpNewHero1();
         newSquad.setSquadMembers(newHero);
-        assertEquals("Timmie",newSquad.getSquadMembers().get(0).getName());
+        Assertions.assertEquals("Timmie",newSquad.getSquadMembers().get(0).getName());
     }
 
     @Test
@@ -49,7 +48,7 @@ public class SquadTest {
         newSquad.clearAllSquadMembers();
         newSquad.getSquadMembers().add(newHero);
         newSquad.getSquadMembers().add(newHero);
-        assertEquals("Timmie",newSquad.getSquadMembers().get(0).getName());
+        Assertions.assertEquals("Timmie",newSquad.getSquadMembers().get(0).getName());
     }
     @Test
     public void addMember_addsMemberToSquad_Hero(){
@@ -59,7 +58,7 @@ public class SquadTest {
         newSquad.clearAllSquadMembers();
         newSquad.getSquadMembers().add(newHero);
         newSquad.getSquadMembers().add(newHero);
-        assertEquals(2,newSquad.getSquadMembers().size());
+        Assertions.assertEquals(2,newSquad.getSquadMembers().size());
     }
 
     @Test
@@ -69,7 +68,7 @@ public class SquadTest {
         Squad testSquad = Squad.setUpNewSquad();
         testSquad.setSquadMembers(newHero);
 
-        assertEquals(1,testSquad.getSquadMembers().get(0).getId());
+        Assertions.assertEquals(1,testSquad.getSquadMembers().get(0).getId());
     }
 
 }
